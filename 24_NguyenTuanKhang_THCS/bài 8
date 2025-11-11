@@ -1,0 +1,5 @@
+can_nang = float(input("nhập cân nặng: "))
+chieu_cao = float(input("nhập chiều cao: "))
+BMI = can_nang / (chieu_cao * chieu_cao)
+BMI_rounded = round (BMI, 2)
+print(f"chỉ số BMI: {BMI_rounded}")

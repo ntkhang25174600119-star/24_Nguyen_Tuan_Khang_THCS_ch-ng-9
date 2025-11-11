@@ -1,0 +1,3 @@
+nam = int(input("nhập năm: "))
+nhuan = (nam % 400 == 0) or (nam % 4 == 0 and nam % 100 != 0)
+print("Năm", nam, "là năm nhuận." * nhuan + "không phải là năm nhuận." * (not nhuan))

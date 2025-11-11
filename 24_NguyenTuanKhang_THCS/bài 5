@@ -1,0 +1,9 @@
+tien_goc = float(input("số tiền gửi ban đầu (VND) : "))
+lai_suat = float(input("lãi suất hàng năm (%) : "))
+lai_suat = lai suat / 100 
+lai_1_thang = goc * lai_suat * (1 / 12)
+lai_2_quy = goc * lai_suat * (2 / 4)
+lai_3_nam = goc * lai_suat * 3 
+print(f"Lãi nhận được sau 1 tháng: {round(lai_1_thang, 2)} VND")
+print(f"Lãi nhận được sau 2 quý: {round(lai_2_quy, 2)} VND")
+print(f"Lãi nhận được sau 3 năm: {round(lai_3_nam, 2)} VND")

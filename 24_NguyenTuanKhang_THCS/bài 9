@@ -1,0 +1,23 @@
+def tinh_tien_dien(kwh):
+    # Giá tiền theo từng bậc
+    bac_1 = 1678  # VND/kWh
+    bac_2 = 1734  # VND/kWh
+    bac_3 = 2014  # VND/kWh
+
+    # Tính tiền cho từng bậc
+    tien_bac_1 = (kwh // 100) * 100 * bac_1
+    tien_bac_2 = ((kwh % 100) // 100) * (kwh - 100) * bac_2
+    tien_bac_3 = ((kwh % 200) // 100) * (kwh - 200) * bac_3
+
+    # Tổng tiền điện
+    tien = tien_bac_1 + tien_bac_2 + tien_bac_3
+
+    return tien
+
+
+# Nhập số kWh từ người dùng
+kwh_tieu_thu = float(input("Nhập số kWh điện đã tiêu thụ: "))
+
+# Tính và in kết quả
+tien_phai_tra = tinh_tien_dien(kwh_tieu_thu)
+print(f"Tổng tiền điện phải trả là: {tien_phai_tra:.2f} VND")

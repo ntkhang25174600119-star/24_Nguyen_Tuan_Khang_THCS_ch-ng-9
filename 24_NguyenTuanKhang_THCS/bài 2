@@ -1,0 +1,11 @@
+# nhập dữ liệu 
+tong_keo = int(input("nhập số kẹo:"))
+so_hoc_sinh = int(input("số học sinh"))
+
+# tính toán 
+keo_moi_hs = tong_keo // so_hoc_sinh # phép chia lấy phần nguyên 
+keo_con_thua = tong_keo % so_hoc_sinh # phép chia lấy phần dư
+
+#in kq 
+print(f"mỗi học sinh nhận được: {keo_moi_hs} viên kẹo")
+print(f"số kẹo còn thừa: {keo_con_thua} viên")

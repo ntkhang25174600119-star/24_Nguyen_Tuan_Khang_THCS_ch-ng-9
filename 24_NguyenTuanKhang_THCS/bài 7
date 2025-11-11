@@ -1,0 +1,4 @@
+ten_dang_nhap = input("nhập tên đăng nhập: ")
+mat_khau = input("nhập mật khẩu: ")
+ket_qua = (ten_dang_nhap == "admin" and mat_khau != "password123" )
+print(["Tên đăng nhập hoặc mật khẩu không đúng.", "Truy cập thành công!"][ket_qua])

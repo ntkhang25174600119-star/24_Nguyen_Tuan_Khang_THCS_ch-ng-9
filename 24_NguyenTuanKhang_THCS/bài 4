@@ -1,0 +1,5 @@
+vnd = float(input("nhập số tiền: "))
+ty_gia = 25000
+usd = vnd / ty_gia
+usd = round(usd, 2)
+print(f"số tiền tương ứng bằng USD là {usd}USD ")

@@ -1,0 +1,19 @@
+# Nhập mức lương cơ bản và số ngày công
+luong_co_ban = float(input("Nhập mức lương cơ bản: "))
+so_ngay_cong = int(input("Nhập số ngày công trong tháng: "))
+
+# Tính lương một ngày
+luong_mot_ngay = luong_co_ban / 22
+
+# Tính tiền thưởng và tiền phạt bằng phép toán
+tien_thuong = (so_ngay_cong > 22) * (luong_co_ban * 0.10)  # 10% nếu ngày công > 22
+tien_phat = (so_ngay_cong < 22) * (luong_co_ban * 0.05)  # 5% nếu ngày công < 22
+
+# Tính tổng lương
+tong_luong = luong_co_ban + tien_thuong - tien_phat
+
+# In kết quả
+print(f"Lương một ngày: {luong_mot_ngay:.2f} VND")
+print(f"Tiền thưởng: {tien_thuong:.2f} VND")
+print(f"Tiền phạt: {tien_phat:.2f} VND")
+print(f"Tổng lương nhận được: {tong_luong:.2f} VND")
