@@ -1,30 +1,18 @@
-def so_nguyen_to(n):
-    if n < 2: 
-        return False 
-    for i in range(2, n):
-        return False 
-    return True
+n = int(input("Nhập số phần tử: "))
+a = []
 
-def so_nguyen_to_trong_khoang(a, b):
-        for n in range(a, b + 1):
-            if so_nguyen_to(n):
-                print(n, end=" ")      
-        
-so_nguyen_to_trong_khoang(1, 30)
+for i in range(n):
+    x = int(input(f"Nhập phần tử thứ {i}: "))
+    a.append(x)
 
+tong_chan = 0
+tong_le = 0
 
-def la_so_nguyen_to(n):
-    if n < 2:
-        return False
-    for i in range(2, n):
-        if n % i == 0:
-            return False
-    return True
+for x in a:
+    if x % 2 == 0:
+        tong_chan += x
+    else:
+        tong_le += x
 
-def in_so_nguyen_to_trong_khoang(a, b):
-    for n in range(a, b + 1):
-        if la_so_nguyen_to(n):
-            print(n, end=" ")
-
-# chạy thử
-in_so_nguyen_to_trong_khoang(1, 30)
+print("Tổng số chẵn:", tong_chan)
+print("Tổng số lẻ:", tong_le)

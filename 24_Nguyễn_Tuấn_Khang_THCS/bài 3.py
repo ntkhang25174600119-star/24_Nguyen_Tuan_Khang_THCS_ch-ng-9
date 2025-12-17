@@ -1,4 +1,14 @@
-def kiem_tra_so_armstrong(n):
-    return n == sum(int(d)**3 for d in str(n))
-print(kiem_tra_so_armstrong(153))
-print(kiem_tra_so_armstrong(254))
+s = input("nhập chuỗi: ")
+kq = "" 
+co_chu = False 
+for ch in s: 
+    if ch != " ":
+        kq += ch
+        co_chu = True
+    else: 
+        if co_chu:
+            kq += " "
+            co_chu = False 
+if len(kq) > 0 and kq[-1] == " ":
+    kq = kq[:1]
+print(kq)

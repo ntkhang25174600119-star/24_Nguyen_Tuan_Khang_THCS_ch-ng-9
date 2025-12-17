@@ -1,5 +1,15 @@
-def tinh_tong_chu_so(n):
-    if n < 10:
-        return n 
-    return (n % 10) + tinh_tong_chu_so(n//10)
-print(tinh_tong_chu_so(485))
+n = int(input("Nhập cấp ma trận: "))
+a = []
+
+for i in range(n):
+    row = []
+    for j in range(n):
+        row.append(int(input(f"a[{i}][{j}] = ")))
+    a.append(row)
+
+tong = 0
+
+for i in range(n):
+    tong += a[i][n - 1 - i]
+
+print("Tổng đường chéo phụ:", tong)

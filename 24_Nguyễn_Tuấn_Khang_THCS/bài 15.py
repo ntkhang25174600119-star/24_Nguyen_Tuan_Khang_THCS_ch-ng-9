@@ -1,15 +1,23 @@
-def nhap_vao_mot_so(n):
-    if n < 2: 
-        return False
-    for i in range(2, n):
-        if n % i == 0: 
-            return False 
-    return True 
-# Nhập số nguyên dương n
-n = int(input("Nhập số nguyên dương n: "))
+t = tuple(map(int, input("Nhập tuple: ").split()))
 
-# Kiểm tra n có phải số nguyên tố không
-if nhap_vao_mot_so(n):
-    print(f"{n} là số nguyên tố.")
-else:
-    print(f"{n} không phải là số nguyên tố.")
+chan = []
+le = []
+
+tong_chan = 0
+tong_le = 0
+
+for x in t:
+    if x % 2 == 0:
+        chan.append(x)
+        tong_chan += x
+    else:
+        le.append(x)
+        tong_le += x
+
+tuple_chan = tuple(chan)
+tuple_le = tuple(le)
+
+print("Tuple chẵn:", tuple_chan)
+print("Tổng chẵn:", tong_chan)
+print("Tuple lẻ:", tuple_le)
+print("Tổng lẻ:", tong_le)

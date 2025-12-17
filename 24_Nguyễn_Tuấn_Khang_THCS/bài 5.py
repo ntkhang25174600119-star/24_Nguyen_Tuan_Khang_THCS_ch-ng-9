@@ -1,6 +1,18 @@
-def kiem_tra_so_doi_xung(n):
-    return str(n) == str(n)[::-1]
+n = int(input("Nhập số phần tử: "))
+a = []
 
-print(kiem_tra_so_doi_xung(121))  
-print(kiem_tra_so_doi_xung(353))  
-print(kiem_tra_so_doi_xung(123))  
+for i in range(n):
+    a.append(int(input()))
+
+kq = []
+
+for x in a:
+    trung = False
+    for y in kq:
+        if x == y:
+            trung = True
+            break
+    if not trung:
+        kq.append(x)
+
+print(kq)
