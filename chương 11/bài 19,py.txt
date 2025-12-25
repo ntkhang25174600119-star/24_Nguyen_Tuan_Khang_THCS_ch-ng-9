@@ -1,0 +1,17 @@
+students = {
+    'An': 8,
+    'Bình': 7,
+    'Chi': 8,
+    'Dũng': 9
+}
+
+group = {}
+
+for name in students:
+    score = students[name]
+    if score in group:
+        group[score].append(name)
+    else:
+        group[score] = [name]
+
+print(group)
